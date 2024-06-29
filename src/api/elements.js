@@ -139,7 +139,7 @@ const elements = [
                         type: "rich_text",
                         text: "This is a caption",
                         annotations: {
-                            bold: false,
+                            bold: true,
                             italic: false,
                         }
                     }
@@ -154,7 +154,7 @@ const elements = [
                         text: "This is a caption",
                         annotations: {
                             bold: false,
-                            italic: false,
+                            italic: true,
                         }
                     }
                 ]

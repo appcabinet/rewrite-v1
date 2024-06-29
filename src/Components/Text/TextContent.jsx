@@ -1,15 +1,16 @@
 import React from "react";
 
-const renderContent = (contents) => {
+const TextContent = ({ contents }) => {
     if (!contents) return null;
+    if (!Array.isArray(contents)) throw new Error("Contents must be an array.");
 
     const render = (content) => {
+        if (content.type !== "rich_text") return null;
+
         const annotationMap = [
             { type: 'italic', component: 'i', condition: !!content.annotations?.italic },
             { type: 'bold', component: 'b', condition: !!content.annotations?.bold },
         ];
-
-        if (content.type !== "rich_text") return null;
 
         return annotationMap.reduce((acc, annotation) => {
             if (annotation.condition) {
@@ -20,12 +21,11 @@ const renderContent = (contents) => {
 
     };
 
-    const validateBlock = () => {
-        if (contents.length === 0) return null;
-        if (!contents.annotations) throw new Error("Annotations are required");
-    };
-
-    return contents.map(content => render(content));
+    return (
+        <p className={"text-left"}>
+            {contents.map(content => render(content))}
+        </p>
+    );
 };
 
-export default renderContent;
+export default TextContent;
