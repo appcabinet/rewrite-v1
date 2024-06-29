@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 import elements from "./elements.js";
 import { sequence } from "./sequence.js";
-import renderBlockType from "./renderBlockType.jsx";
-import Block from "../components/Core/Block.jsx";
+import RenderBlockType from "./RenderBlockType.jsx";
+import Block from "../components/Block.jsx";
 import renderContent from "./renderContent.jsx";
 
 const Representation = () => {
@@ -21,7 +21,8 @@ const Representation = () => {
                 const element = elements[block.element_id]; // Hashable element
                 const content = renderContent(element.content);
 
-                const renderedBlock = renderBlockType({
+                const renderedBlock = RenderBlockType({
+                    parentElement: element,
                     type: element.type,
                     children: content,
                 });

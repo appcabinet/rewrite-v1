@@ -1,5 +1,6 @@
-const elements = {
-    0: {
+const elements = [
+    {
+        id: 0,
         type: "h1",
         content: [
             {
@@ -12,7 +13,8 @@ const elements = {
             },
         ],
     },
-    1: {
+    {
+        id: 1,
         type: "paragraph",
         content: [
             {
@@ -41,7 +43,8 @@ const elements = {
             }
         ]
     },
-    2: {
+    {
+        id: 2,
         type: "paragraph",
         content: [
             {
@@ -62,7 +65,8 @@ const elements = {
             }
         ]
     },
-    3: {
+    {
+        id: 3,
         type: "block_quote",
         content: [
             {
@@ -75,7 +79,8 @@ const elements = {
             }
         ]
     },
-    4: {
+    {
+        id: 4,
         type: "paragraph",
         content: [
             {
@@ -121,7 +126,56 @@ const elements = {
                 }
             },
         ]
+    },
+    {
+        id: 5,
+        type: "carousel",
+        items: [
+            {
+                type: "image",
+                src: "https://picsum.photos/200/200",
+                content: [
+                    {
+                        type: "rich_text",
+                        text: "This is a caption",
+                        annotations: {
+                            bold: false,
+                            italic: false,
+                        }
+                    }
+                ]
+            },
+            {
+                type: "image",
+                src: "https://picsum.photos/200/200",
+                content: [
+                    {
+                        type: "rich_text",
+                        text: "This is a caption",
+                        annotations: {
+                            bold: false,
+                            italic: false,
+                        }
+                    }
+                ]
+            },
+            {
+                type: "image",
+                src: "https://picsum.photos/200/200",
+                content: [
+                    {
+                        type: "rich_text",
+                        text: "This is a caption",
+                        annotations: {
+                            bold: false,
+                            italic: false,
+                        }
+                    }
+                ]
+            },
+        ]
     }
-};
+
+];
 
 export default elements;

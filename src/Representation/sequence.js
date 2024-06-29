@@ -14,6 +14,14 @@ export const sequence = [
     {
         type: "block",
         element_id: 3,
+    },
+    {
+        type: "block",
+        element_id: 4,
+    },
+    {
+        type: "block",
+        element_id: 5
     }
 ];
 

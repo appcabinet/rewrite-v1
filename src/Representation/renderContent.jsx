@@ -4,11 +4,9 @@ const renderContent = (contents) => {
     if (!contents) return null;
 
     const render = (content) => {
-        const { italic, bold } = content.annotations;
-
         const annotationMap = [
-            { type: 'italic', component: 'i', condition: italic },
-            { type: 'bold', component: 'b', condition: bold },
+            { type: 'italic', component: 'i', condition: !!content.annotations?.italic },
+            { type: 'bold', component: 'b', condition: !!content.annotations?.bold },
         ];
 
         if (content.type !== "rich_text") return null;
