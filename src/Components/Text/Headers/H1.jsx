@@ -1,11 +1,12 @@
 import TextContent from "@/Components/Text/TextContent.jsx";
 
-const LinkToPage = ({ blockData }) => {
+const H1 = ({ blockData }) => {
     return (
-        <a href={blockData.href}>
+        <h1 className={"text-3xl mb-5"}>
             <TextContent content={blockData.content}/>
-        </a>
+        </h1>
     );
+
 };
 
-export default LinkToPage;
+export default H1;

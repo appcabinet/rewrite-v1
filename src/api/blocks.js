@@ -1,4 +1,4 @@
-const elements = [
+const Blocks = [
     {
         id: 0,
         type: "h1",
@@ -178,4 +178,4 @@ const elements = [
 
 ];
 
-export default elements;
+export default Blocks;

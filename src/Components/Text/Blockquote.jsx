@@ -1,7 +1,9 @@
-export const Blockquote = ({ children }) => {
+import TextContent from "@/Components/Text/TextContent.jsx";
+
+export const Blockquote = ({ blockData }) => {
     return (
         <blockquote className="text-left">
-            {children}
+            <TextContent content={blockData.content}/>
         </blockquote>
     );
 };
