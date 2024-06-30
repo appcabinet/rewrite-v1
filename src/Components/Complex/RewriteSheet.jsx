@@ -1,0 +1,30 @@
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/shadcn/components/ui/sheet";
+import { useState } from "react";
+
+const RewriteSheet = ({ sheet }) => {
+    const [sheetData, setSheetData] = useState();
+
+    return (
+        <Sheet>
+            <SheetTrigger>Open</SheetTrigger>
+            <SheetContent>
+                <SheetHeader>
+                    <SheetTitle>Are you absolutely sure?</SheetTitle>
+                    <SheetDescription>
+                        This action cannot be undone. This will permanently delete your account
+                        and remove your data from our servers.
+                    </SheetDescription>
+                </SheetHeader>
+            </SheetContent>
+        </Sheet>
+    );
+};
+
+export default RewriteSheet;

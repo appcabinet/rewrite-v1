@@ -19,25 +19,32 @@ export const Blocks = [
         type: "paragraph",
         footnote: {
             enabled: true,
-            content: [
+            title: "Jungian Psychology",
+            blocks: [
                 {
-                    type: "rich_text",
-                    text: "If you would like to learn more about the unconscious influence of God in the human psyche, I highly recommend reading Carl Jung. You can read more of his works ",
-                    annotations: {
-                        bold: false,
-                        italic: false,
-                    }
-                },
-                {
-                    type: "link_to_page",
-                    text: "here.",
-                    href: "https://www.britannica.com/biography/Carl-Jung",
-                    annotations: {
-                        bold: false,
-                        italic: false
-                    }
+                    type: "paragraph",
+                    id: 13,
+                    content: [
+                        {
+                            type: "rich_text",
+                            text: "If you would like to learn more about the unconscious influence of God in the human psyche, I highly recommend reading Carl Jung. You can read more of his works ",
+                            annotations: {
+                                bold: false,
+                                italic: false,
+                            }
+                        },
+                        {
+                            type: "link_to_page",
+                            text: "here.",
+                            href: "https://www.britannica.com/biography/Carl-Jung",
+                            annotations: {
+                                bold: false,
+                                italic: false
+                            }
+                        }
+                    ]
                 }
-            ]
+            ],
         },
         social: {
             enabled: false,
@@ -111,6 +118,87 @@ export const Blocks = [
             }
         ]
     },
+    // {
+    //     id: 10,
+    //     type: "panel",
+    //     social: {
+    //         numComments: 4,
+    //         comments: []
+    //     },
+    //     footnote: {
+    //         enabled: true
+    //     },
+    //     items: [
+    //         {
+    //             title: "Religious Burials",
+    //             blocks: [
+    //                 {
+    //                     id: 11,
+    //                     type: "paragraph",
+    //                     content: [
+    //                         {
+    //                             type: "rich_text",
+    //                             text: "Although the first instances of religious devotion is entirely conjectural, the earliest known intentional burials are found at the site of ",
+    //                             annotations: {
+    //                                 bold: false,
+    //                                 italic: false,
+    //                             }
+    //                         },
+    //                         {
+    //                             type: "link_to_page",
+    //                             text: "Qazfeh",
+    //                             href: "https://www.britannica.com/place/Qafzeh",
+    //                             annotations: {
+    //                                 bold: false,
+    //                                 italic: false,
+    //                             }
+    //                         },
+    //                         {
+    //                             type: "rich_text",
+    //                             text: " in Israel, going back roughly 100,000 years.",
+    //                             annotations: {
+    //                                 bold: false,
+    //                                 italic: false,
+    //                             }
+    //                         },
+    //                     ]
+    //                 },
+    //                 {
+    //                     type: "image",
+    //                     src: "https://picsum.photos/200/200",
+    //                     content: [
+    //                         {
+    //                             type: "rich_text",
+    //                             text: "This is a caption",
+    //                             annotations: {
+    //                                 bold: true,
+    //                                 italic: false,
+    //                             },
+    //                         }
+    //                     ]
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             title: "Göbekli Tepe",
+    //             blocks: [
+    //                 {
+    //                     id: 12,
+    //                     type: "paragraph",
+    //                     content: [
+    //                         {
+    //                             type: "rich_text",
+    //                             text: "Göbekli Tepe, which was originally mistaken to be a cemetery, was re-excavated in 1993 and discovered to be one of the oldest religious ritual sites ever discovered."
+    //                         }
+    //                     ]
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             title: "Modern Religion"
+    //         }
+    //     ]
+    // },
     {
         id: 4,
         type: "paragraph",
@@ -119,31 +207,7 @@ export const Blocks = [
             comments: []
         },
         content: [
-            {
-                type: "rich_text",
-                text: "Although the first instances of religious devotion is entirely conjectural, the earliest known intentional burials are found at the site of Qazfeh in Israel, going back roughly 100,000 years. Göbekli Tepe, which was originally mistaken to be a cemetery, was re-excavated in 1993 and discovered to be one of the oldest religious ritual sites ever discovered.",
-                annotations: {
-                    bold: false,
-                    italic: false,
-                }
-            },
-            {
-                type: "link_to_page",
-                text: "Qazfeh",
-                href: "https://www.britannica.com/place/Qafzeh",
-                annotations: {
-                    bold: false,
-                    italic: false,
-                }
-            },
-            {
-                type: "rich_text",
-                text: " in Israel, going back roughly 100,000 years. Göbekli Tepe, which was originally mistaken to be a cemetery, was re-excavated in 1993 and discovered to be one of the oldest religious ritual sites ever discovered.",
-                annotations: {
-                    bold: false,
-                    italic: false,
-                }
-            },
+
             {
                 type: "link_to_page",
                 text: "Göbekli Tepe",

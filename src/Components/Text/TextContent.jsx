@@ -6,14 +6,12 @@ const TextContent = ({ content, className }) => {
     if (!Array.isArray(content)) throw new Error("Contents must be an array.");
 
     const render = (chunk) => {
-        if (chunk.type !== "rich_text") return null;
-
         const annotationMap = [
             { type: 'italic', component: 'i', condition: !!chunk.annotations?.italic },
             { type: 'bold', component: 'span', condition: !!chunk.annotations?.bold, className: "font-semibold" },
         ];
 
-        return annotationMap.reduce((acc, annotation) => {
+        const annotatedText = annotationMap.reduce((acc, annotation) => {
             if (annotation.condition) {
                 return React.createElement(
                     annotation.component,
@@ -24,6 +22,15 @@ const TextContent = ({ content, className }) => {
             return acc;
         }, chunk.text);
 
+        if (chunk.type === 'link_to_page') {
+            return React.createElement(
+                'a',
+                { key: keygen(), className: "text-orange-500 hover:underline", href: chunk.href },
+                ...annotatedText
+            );
+        }
+
+        return annotatedText;
     };
 
     return (
