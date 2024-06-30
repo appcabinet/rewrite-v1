@@ -1,13 +1,14 @@
-const Blocks = [
+export const Blocks = [
     {
         id: 0,
-        type: "h1",
+        type: "h3",
+        sidebar: false,
         content: [
             {
                 type: "rich_text",
-                text: "Humans have an innate need to aspire to God.",
+                text: "Humans beings have an innate need to aspire to God.",
                 annotations: {
-                    bold: false,
+                    bold: true,
                     italic: false,
                 }
             },
@@ -16,6 +17,33 @@ const Blocks = [
     {
         id: 1,
         type: "paragraph",
+        footnote: {
+            enabled: true,
+            content: [
+                {
+                    type: "rich_text",
+                    text: "If you would like to learn more about the unconscious influence of God in the human psyche, I highly recommend reading Carl Jung. You can read more of his works ",
+                    annotations: {
+                        bold: false,
+                        italic: false,
+                    }
+                },
+                {
+                    type: "link_to_page",
+                    text: "here.",
+                    href: "https://www.britannica.com/biography/Carl-Jung",
+                    annotations: {
+                        bold: false,
+                        italic: false
+                    }
+                }
+            ]
+        },
+        social: {
+            enabled: false,
+            numComments: 23,
+            comments: []
+        },
         content: [
             {
                 type: "rich_text",
@@ -41,7 +69,7 @@ const Blocks = [
                     bold: false,
                 }
             }
-        ]
+        ],
     },
     {
         id: 2,
@@ -68,6 +96,10 @@ const Blocks = [
     {
         id: 3,
         type: "block_quote",
+        social: {
+            numComments: 12,
+            comments: []
+        },
         content: [
             {
                 type: "rich_text",
@@ -82,6 +114,10 @@ const Blocks = [
     {
         id: 4,
         type: "paragraph",
+        social: {
+            numComments: 2,
+            comments: []
+        },
         content: [
             {
                 type: "rich_text",
@@ -174,8 +210,23 @@ const Blocks = [
                 ]
             },
         ]
+    },
+    {
+        id: 6,
+        type: "paragraph",
+        footnote: {
+            enabled: true
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Due to this fundamental religious instinct, Homo Sapiens were able to form large and complicated social structures due to the shared beliefs made possible by the mythology, ethos, and moral guidelines provided by religion. Whereas before the limit of our hunter-gatherer tribes was 150 people, religion acted as the cornerstone that made entire civilizations possible. This is explained in Sapiens:",
+                annotations: {
+                    bold: false,
+                    italic: false
+                }
+            },
+        ]
     }
 
 ];
-
-export default Blocks;

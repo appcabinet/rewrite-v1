@@ -10,12 +10,16 @@ const TextContent = ({ content, className }) => {
 
         const annotationMap = [
             { type: 'italic', component: 'i', condition: !!chunk.annotations?.italic },
-            { type: 'bold', component: 'b', condition: !!chunk.annotations?.bold },
+            { type: 'bold', component: 'span', condition: !!chunk.annotations?.bold, className: "font-semibold" },
         ];
 
         return annotationMap.reduce((acc, annotation) => {
             if (annotation.condition) {
-                return React.createElement(annotation.component, { key: keygen() }, acc);
+                return React.createElement(
+                    annotation.component,
+                    { key: keygen(), className: annotation.className },
+                    acc
+                );
             }
             return acc;
         }, chunk.text);

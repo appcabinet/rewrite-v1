@@ -5,9 +5,7 @@ import Article from "./Article/Article.jsx";
 function App() {
 
     return (
-        <div className="w-full flex justify-center content-center">
-            <Article/>
-        </div>
+        <Article/>
     );
 }
 

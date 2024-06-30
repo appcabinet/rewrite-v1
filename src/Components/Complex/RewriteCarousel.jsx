@@ -11,7 +11,7 @@ import { keygen } from "@/api/keygen.js";
 
 const RewriteCarousel = ({ blockData: blockData }) => {
     return (
-        <Carousel className={"my-8"}>
+        <Carousel className={"my-4"}>
             <CarouselContent>
                 {blockData.items.map(item => {
                     return (
