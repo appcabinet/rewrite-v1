@@ -9,7 +9,8 @@ import TextContent from "@/Components/Text/TextContent.jsx";
 import { keygen } from "@/api/keygen.js";
 
 
-const RewriteCarousel = ({ blockData: blockData }) => {
+// TODO - refactor
+const RewriteCarousel = ({ blockData }) => {
     return (
         <Carousel className={"my-4"}>
             <CarouselContent>

@@ -15,6 +15,10 @@ import RewritePanel from "@/Components/Complex/RewritePanel.jsx";
 import RewriteDialog from "@/Components/Complex/RewriteDialog.jsx";
 import { Button } from "@/shadcn/components/ui/button.jsx";
 import Info from "@/Components/Interactive/Info.jsx";
+import { Image } from "lucide-react";
+import StandardImage from "@/Components/Misc/StandardImage.jsx";
+import Centerquote from "@/Components/Text/Centerquote.jsx";
+import Embed from "@/Components/Complex/Embed.jsx";
 
 
 const componentRegistry = {
@@ -28,6 +32,9 @@ const componentRegistry = {
     sheet: RewriteSheet,
     panel: RewritePanel,
     dialog: RewriteDialog,
+    image: StandardImage,
+    center_quote: Centerquote,
+    embed: Embed,
 };
 
 const Block = ({ blockData, sidebars }) => {
@@ -63,8 +70,12 @@ const Block = ({ blockData, sidebars }) => {
         if (sidebars === false) return null;
         return (
             <div className="w-8 h-full flex flex-col justify-end items-center rounded-xl">
-                <AiOutlineComment className={`${iconStyling} text-neutral-400`} size={"1.7em"}/>
-                <span className="text-neutral-400 text-sm font-medium">{socialData?.numComments}</span>
+                {socialData?.enabled &&
+                    <>
+                        <AiOutlineComment className={`${iconStyling} text-neutral-400`} size={"1.7em"}/>
+                        <span className="text-neutral-400 text-sm font-medium">{socialData?.numComments || null}</span>
+                    </>
+                }
             </div>
         );
     };
@@ -74,7 +85,7 @@ const Block = ({ blockData, sidebars }) => {
         <div className="my-4 w-full flex justify-end items-center">
             {renderLSidebar()}
             <div className={`flex-1 ${sidebars ? 'px-6' : 'px-0'}`}>
-                <Component key={blockData.id + '-component'} blockData={blockData}/>
+                {blockData && <Component key={blockData.id + '-component'} blockData={blockData}/>}
             </div>
             {renderRSidebar()}
         </div>
