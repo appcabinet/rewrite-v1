@@ -18,6 +18,7 @@ import StandardImage from "@/Components/Misc/StandardImage.jsx";
 import Centerquote from "@/Components/Text/Centerquote.jsx";
 import Embed from "@/Components/Complex/Embed.jsx";
 import Footnote from "@/Components/Interactive/Footnote.jsx";
+import { Bookmark } from "lucide-react";
 
 
 const componentRegistry = {
@@ -39,16 +40,28 @@ const componentRegistry = {
 const Block = ({ blockData, sidebars }) => {
     const [socialData, setSocialData] = useState({});
     const [footnoteData, setFootnoteData] = useState({});
+    const [isHovered, setIsHovered] = useState(false);
     const [componentClicked, setComponentClicked] = useState(null);
 
     if (sidebars == null) sidebars = true;
+
+    const iconStyling = "text-neutral-400 hover:cursor-pointer hover:text-gray-600 transition duration-300 ease-in-out";
 
     useEffect(() => {
         setSocialData(blockData.social);
         setFootnoteData(blockData.footnote);
     }, []);
 
-    const iconStyling = "text-neutral-400 hover:cursor-pointer hover:text-gray-600 transition duration-300 ease-in-out";
+    const handleMouseEnter = () => {
+        console.log('hovered');
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        console.log('unhovered');
+        setIsHovered(false);
+    };
+
 
     const renderLSidebar = () => {
         if (sidebars === false) return null;
@@ -69,11 +82,22 @@ const Block = ({ blockData, sidebars }) => {
     const renderRSidebar = () => {
         if (sidebars === false) return null;
         return (
-            <div className="w-12 h-full flex flex-col justify-end items-center rounded-xl">
-                {socialData?.enabled && socialData?.numComments !== 0 &&
+            <div className="w-36 h-full flex space justify-between items-center rounded-xl">
+                {isHovered &&
                     <>
-                        <AiOutlineComment className={`${iconStyling} text-neutral-400`} size={"1.7em"}/>
-                        <span className="text-neutral-400 text-sm font-medium">{socialData?.numComments || null}</span>
+                        <div className={"flex items-center"}>
+                            <AiOutlineComment className={`${iconStyling} mx-1 text-neutral-400`} size={"1.7em"}/>
+                            <span
+                                className="text-neutral-400 text-sm font-medium">{socialData?.numComments || null}</span>
+                        </div>
+                        <div className={"flex items-center"}>
+                            <Bookmark className={`${iconStyling} mx-1 text-neutral-400`} size={"1.5em"}/>
+                            <span
+                                className="text-neutral-400 text-sm font-medium">4</span>
+                        </div>
+                        <div className={"flex items-center"}>
+                            <AiOutlineEllipsis className={`${iconStyling} mx-1 text-neutral-400`} size={"1.7em"}/>
+                        </div>
                     </>
                 }
             </div>
@@ -84,7 +108,10 @@ const Block = ({ blockData, sidebars }) => {
     const Component = componentRegistry[blockData.type];
     return (
         <div
-            className="my-0 py-2 w-full max-w-full flex justify-center items-center hover:cursor-pointer transition ease-in-out rounded-lg">
+            className="my-0 py-2 w-full max-w-full flex justify-center items-center hover:cursor-pointer transition ease-in-out rounded-lg"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             {renderLSidebar()}
             <div onClick={console.log}
                  className={`flex-1 px-4`}>
