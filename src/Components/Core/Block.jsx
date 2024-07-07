@@ -84,10 +84,10 @@ const Block = ({ blockData, sidebars }) => {
     const Component = componentRegistry[blockData.type];
     return (
         <div
-            className="my-0 py-2 w-full max-w-full flex justify-center items-center  hover:bg-neutral-100x hover:cursor-pointerx transition ease-in-out rounded-lg">
+            className="my-0 py-2 w-full max-w-full flex justify-center items-center hover:cursor-pointer transition ease-in-out rounded-lg">
             {renderLSidebar()}
             <div onClick={console.log}
-                 className={`flex-1 ${sidebars ? 'px-6' : 'px-0'}`}>
+                 className={`flex-1 px-4`}>
                 {blockData && <Component key={blockData.id + '-component'} blockData={blockData}/>}
             </div>
             {renderRSidebar()}
