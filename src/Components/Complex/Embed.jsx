@@ -25,8 +25,12 @@ const extractScriptInfo = (embedString) => {
     return scripts;
 };
 
-const Embed = ({ embedString }) => {
+const Embed = ({ blockData }) => {
+
     const containerRef = useRef(null);
+
+    const embedString = blockData.src;
+
 
     useEffect(() => {
         const loadScript = (src, async = false) => {
@@ -45,7 +49,10 @@ const Embed = ({ embedString }) => {
     if (!embedString) return null;
 
     return (
-        <div ref={containerRef} dangerouslySetInnerHTML={{ __html: embedString }}/>
+        <div
+            ref={containerRef}
+            className={"relative"}
+            dangerouslySetInnerHTML={{ __html: embedString }}/>
     );
 
 };

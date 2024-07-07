@@ -18,8 +18,8 @@ export const Blocks = [
         id: 1,
         type: "paragraph",
         footnote: {
-            enabled: false,
-            title: "Jungian Psychology",
+            enabled: true,
+            title: "Northern Lights",
             blocks: [
                 {
                     type: "paragraph",
@@ -27,7 +27,7 @@ export const Blocks = [
                     content: [
                         {
                             type: "rich_text",
-                            text: "If you would like to learn more about the unconscious influence of God in the human psyche, I highly recommend reading Carl Jung. You can read more of his works ",
+                            text: "",
                             annotations: {
                                 bold: false,
                                 italic: false,
@@ -230,66 +230,6 @@ export const Blocks = [
             },
         ]
     },
-    // {
-    //     id: 5,
-    //     type: "carousel",
-    //     items: [
-    //         {
-    //             blocks: [
-    //                 {
-    //                     type: "image",
-    //                     src: "https://picsum.photos/200/200",
-    //                     content: [
-    //                         {
-    //                             type: "rich_text",
-    //                             text: "This is a caption",
-    //                             annotations: {
-    //                                 bold: true,
-    //                                 italic: false,
-    //                             }
-    //                         }
-    //                     ]
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             blocks: [
-    //                 {
-    //                     type: "image",
-    //                     src: "https://picsum.photos/200/200",
-    //                     content: [
-    //                         {
-    //                             type: "rich_text",
-    //                             text: "This is a caption",
-    //                             annotations: {
-    //                                 bold: false,
-    //                                 italic: true,
-    //                             }
-    //                         }
-    //                     ]
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             blocks: [
-    //                 {
-    //                     type: "image",
-    //                     src: "https://picsum.photos/200/200",
-    //                     content: [
-    //                         {
-    //                             type: "rich_text",
-    //                             text: "This is a caption",
-    //                             annotations: {
-    //                                 bold: false,
-    //                                 italic: false,
-    //                             }
-    //                         }
-    //                     ]
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // },
     {
         id: 6,
         type: "paragraph",
@@ -398,14 +338,14 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "For example, I was raised in Canada. Although Canada has some socialist leaning policies, it is largely capitalistic, embraces diversity/multiculturalism, and emphasizes equality and fairness. Coincidentally, I tend to embody these values in my work and free time. I aim to start my own business, enjoy meeting people from different countries, and see myself as an egalitarian. So long as my neighbour and I believe in a shared idea of Canada, our society will continue to function. This is however, ",
+                text: "For example, I was raised in Canada. Although Canada has some socialist leaning policies, it is largely capitalistic, embraces diversity/multiculturalism, and emphasizes equality and fairness. Coincidentally, I tend to embody these values in my work and free time. I aim to start my own business, enjoy meeting people from different countries, and see myself as an egalitarian. So long as my neighbour and I believe in a shared idea of Canada, our society will continue to function. This however, ",
                 annotations: {
                     italic: false,
                 }
             },
             {
                 type: "rich_text",
-                text: "a common myth absent of God.",
+                text: "is a common myth absent of God.",
                 annotations: {
                     italic: true,
                 }
@@ -421,6 +361,9 @@ export const Blocks = [
             numComments: 0,
             comments: []
         },
+        footnote: {
+            enabled: true
+        },
         content: [
             {
                 type: "rich_text",
@@ -435,7 +378,7 @@ export const Blocks = [
     {
         id: 26,
         type: "image",
-        src: "https://picsum.photos/200/200",
+        src: "./article/existential.jpeg",
         content: [
             {
                 type: "rich_text",
@@ -621,10 +564,1045 @@ export const Blocks = [
                     },
                     {
                         type: "embed",
-                        src: "https://www.tiktok.com/@mattkomo/video/7020136740404573446",
+                        src: `<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@ghostofascension/video/7307953512850164993\" data-video-id=\"7307953512850164993\" data-embed-from=\"embed_page\" style=\"max-width:605px; min-width:325px;\"> <section> <a target=\"_blank\" title=\"@ghostofascension\" href=\"https://www.tiktok.com/@ghostofascension?refer=embed\">@ghostofascension</a> <p>Believe in yourself <a title=\"motivation\" target=\"_blank\" href=\"https://www.tiktok.com/tag/motivation?refer=embed\">#motivation</a> <a title=\"ghost\" target=\"_blank\" href=\"https://www.tiktok.com/tag/ghost?refer=embed\">#ghost</a> </p> <a target=\"_blank\" title=\"♬ original sound - Ghostofascension\" href=\"https://www.tiktok.com/music/original-sound-7307953565128002305?refer=embed\">♬ original sound - Ghostofascension</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>`,
+                    },
+                    {
+                        type: "embed",
+                        src: `<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@ghostofascension/video/7307953512850164993\" data-video-id=\"7307953512850164993\" data-embed-from=\"embed_page\" style=\"max-width:605px; min-width:325px;\"> <section> <a target=\"_blank\" title=\"@ghostofascension\" href=\"https://www.tiktok.com/@ghostofascension?refer=embed\">@ghostofascension</a> <p>Believe in yourself <a title=\"motivation\" target=\"_blank\" href=\"https://www.tiktok.com/tag/motivation?refer=embed\">#motivation</a> <a title=\"ghost\" target=\"_blank\" href=\"https://www.tiktok.com/tag/ghost?refer=embed\">#ghost</a> </p> <a target=\"_blank\" title=\"♬ original sound - Ghostofascension\" href=\"https://www.tiktok.com/music/original-sound-7307953565128002305?refer=embed\">♬ original sound - Ghostofascension</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>`,
+                    },
+                    {
+                        type: "embed",
+                        src: `<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@ghostofascension/video/7307953512850164993\" data-video-id=\"7307953512850164993\" data-embed-from=\"embed_page\" style=\"max-width:605px; min-width:325px;\"> <section> <a target=\"_blank\" title=\"@ghostofascension\" href=\"https://www.tiktok.com/@ghostofascension?refer=embed\">@ghostofascension</a> <p>Believe in yourself <a title=\"motivation\" target=\"_blank\" href=\"https://www.tiktok.com/tag/motivation?refer=embed\">#motivation</a> <a title=\"ghost\" target=\"_blank\" href=\"https://www.tiktok.com/tag/ghost?refer=embed\">#ghost</a> </p> <a target=\"_blank\" title=\"♬ original sound - Ghostofascension\" href=\"https://www.tiktok.com/music/original-sound-7307953565128002305?refer=embed\">♬ original sound - Ghostofascension</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>`,
+                    },
+                    {
+                        type: "embed",
+                        src: `<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@ghostofascension/video/7307953512850164993\" data-video-id=\"7307953512850164993\" data-embed-from=\"embed_page\" style=\"max-width:605px; min-width:325px;\"> <section> <a target=\"_blank\" title=\"@ghostofascension\" href=\"https://www.tiktok.com/@ghostofascension?refer=embed\">@ghostofascension</a> <p>Believe in yourself <a title=\"motivation\" target=\"_blank\" href=\"https://www.tiktok.com/tag/motivation?refer=embed\">#motivation</a> <a title=\"ghost\" target=\"_blank\" href=\"https://www.tiktok.com/tag/ghost?refer=embed\">#ghost</a> </p> <a target=\"_blank\" title=\"♬ original sound - Ghostofascension\" href=\"https://www.tiktok.com/music/original-sound-7307953565128002305?refer=embed\">♬ original sound - Ghostofascension</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>`,
+                    },
+                    {
+                        type: "embed",
+                        src: `<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@ghostofascension/video/7307953512850164993\" data-video-id=\"7307953512850164993\" data-embed-from=\"embed_page\" style=\"max-width:605px; min-width:325px;\"> <section> <a target=\"_blank\" title=\"@ghostofascension\" href=\"https://www.tiktok.com/@ghostofascension?refer=embed\">@ghostofascension</a> <p>Believe in yourself <a title=\"motivation\" target=\"_blank\" href=\"https://www.tiktok.com/tag/motivation?refer=embed\">#motivation</a> <a title=\"ghost\" target=\"_blank\" href=\"https://www.tiktok.com/tag/ghost?refer=embed\">#ghost</a> </p> <a target=\"_blank\" title=\"♬ original sound - Ghostofascension\" href=\"https://www.tiktok.com/music/original-sound-7307953565128002305?refer=embed\">♬ original sound - Ghostofascension</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>`,
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Much of the above advice is about “fixing your mindset” and other permutations of "
+            },
+            {
+                type: "rich_text",
+                text: "behaviour management.",
+                annotations: {
+                    italic: true,
+                }
+            },
+            {
+                type: "rich_text",
+                text: "Those who go down this rabbit hole may find themselves in a worse place than where they left off."
+            },
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "This is the paradox of self-help:"
+            }
+        ]
+    },
+    {
+        type: "center_quote",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Self-help isn’t self-help. It involves unidirectional advice that fails to take into account your current life circumstances.",
+                annotations: {
+                    bold: true,
+                    italic: true,
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Socrates himself was against writing. In his mind, written words “preserve a solemn silence” (1) when asked a question, and therefore fail to convey true Knowledge. The internet is much the same — ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "it lacks dialogue,",
+                annotations: {
+                    italic: true,
+                }
+            },
+            {
+                type: "rich_text",
+                text: "and is therefore passive in nature. In stark contrast, apps and digital tools are ",
+                annotations: {
+                    italic: false,
+                }
+            },
+            {
+                type: "rich_text",
+                text: "utilitarian ",
+                annotations: {
+                    italic: true,
+                }
+            },
+            {
+                type: "rich_text",
+                text: "by nature. Search engines index millions of results in less then a second to get you where you need to go. Your next Über is less than 10 minutes away. There are entire engineering teams working to shorten API response times by as little as 50ms. These applications are ",
+                annotations: {
+                    italic: false,
+                }
+            },
+            {
+                type: "rich_text",
+                text: "there to help you get things done. ",
+                annotations: {
+                    italic: true,
+                    bold: true,
+                }
+            },
+            {
+                type: "rich_text",
+                text: "Ellen Lupton explains this in her book ",
+                annotations: {
+                    italic: false,
+                }
+            },
+            {
+                type: "rich_text",
+                text: "Thinking With Type:",
+                annotations: {
+                    italic: true,
+                }
+            },
+
+        ]
+    },
+    {
+        type: "block_quote",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        source: "https://ellenlupton.com/Thinking-with-Type",
+        content: [
+            {
+                type: "rich_text",
+                text: "The impatience of the digital reader arises from culture, not from the essential character of display technologies. Users of websites have different expectations than users of print. They expect to to feel “productive”, not contemplative. They expect to be in search mode, not processing mode.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "We usually browse the internet to accomplish something. The utilitarian nature of applications and digital tooling means they serve a clear purpose; This is how businesses make their money. However, since the internet has a culture of productivity, the long and hard path is swept under the rug in favour of more practical, “tangible” solutions. As such, the internet offers what the people want — shallow advice, productivity based time management tools, AI therapy, and a plethora of online courses ready to solve this or that problem. ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "It is my belief that most of these modalities will fail to help you in any meaningful way.",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "When engaging with this part of the internet, ask yourself:",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "center_quote",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "How many of these apps and self-help “gurus” would still try to help you if it didn’t make them any money?",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        footnote: {
+            enabled: true,
+            title: "Self-Help Modalities Can Still be Useful",
+            blocks: [
+                {
+                    type: "paragraph",
+                    content: [
+                        {
+                            type: "rich_text",
+                            text: "This is not to say that all online self-help modalities are useless. There is amazing tooling that can help you stay on track, accomplish your goals, and keep your headspace organized (I love Notion). Informative YouTubers such as Andrew Huberman and others explain the science of self improvement. There is hype around cold therapy, exercising is cool, and smoking isn’t. Personally, I have digital tooling that saves me over 40 workdays a year (1). The plethora of tools, knowledge, and advice available on the world wide web is astonishing;  please pick your poison carefully."
+                        }
+                    ]
+                }
+            ]
+
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Again, this is not necessarily a jab at capitalism. As a consumer however, it is important to know that these tools serve an agenda; and they may not always be in your best interests.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "image",
+        src: "./article/matrix.png",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "DALL-E 3 generated image: ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: `“Minimalistic polygon representation of androgynous person drowning in a sea of data.”`,
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "h2",
+        social: {
+            enabled: false,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "How to Actually Help Yourself",
+                annotations: {
+                    italic: false,
+                    bold: true
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "As I explained earlier, helping yourself becomes much easier once you have ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "awareness",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: " of a problem and ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "why",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: " it is occurring. In awareness we have clarity, and with clarity the path forward becomes obvious. This best illustrated with an example.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "We will call our protagonist Jake. Jake is working a well paying job in Toronto and making progress in his career. He has a girlfriend, a group of friends he enjoys hanging out with, and has a few side projects of his own. Sound familiar?",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Unfortunately for Jake, he finds himself very anxious when he comes in to work every day. Some days he feels like an imposter, other days he feels that he is going to make a mistake and get fired. Despite his manager’s reassurances, deep down Jake feels he is incompetent at his job. ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "After looking at career advice on TikTok, Jake is left more confused. Some people recommend he work less, not more. Others recommend the opposite. Some tell him to be confident. Others tell him to be more assertive. Where to begin?",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "We can summarize Jakes career anxiety into the following diagram:",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "image",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        src: "./article/career-anxiety.jpeg",
+        content: [
+            {
+                type: "rich_text",
+                text: "Jake's career anxiety.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Most of our issues follow this pattern. Based on how we perceive the outside world (consciously or subconsciously), we respond instinctively. If I see my career prospects as bad, I will respond anxiously. If I see my career prospects as good, I will respond positively (more on this in my article ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "link_to_page",
+                text: "here",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "). From this we can deduce the following:",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+        ]
+    },
+    {
+        type: "center_quote",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        footnote: {
+            enabled: true,
+            title: "Stoicism",
+            blocks: [
+                {
+                    type: "paragraph",
+                    content: [
+                        {
+                            type: "rich_text",
+                            text: "This idea is echoed in Stoic epistemology. A central tenet of Stoicism is to focus your efforts only on the things within your control, such as your own judgments, actions, and will. External events are not under your control, so the Stoic strives to accept them calmly and dispassionately.",
+                        }
+                    ]
+                },
+                {
+                    type: "paragraph",
+                    content: [
+                        {
+                            type: "rich_text",
+                            text: "The Stoics also saw emotions as the product of our judgments and opinions about events, not the events themselves. By correcting faulty judgments based on reason, one could minimize irrational, excessive emotions and achieve a state of calm (apatheia)."
+                        }
+                    ]
+                }
+            ]
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Our problems stem from our perceptions of the internal and external world.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "As we begin to alter our perceptions, our minds and bodies will respond naturally. According to a study by Boston University, optimists are more likely to achieve “exceptional longevity” and are found to live 11 to 15 percent longer (1). This is obvious — optimists have a positive perception of the world, and what follows is a healthy physiological response from the body.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "However, just because Jake comes in anxious to work every day does not mean that his career anxiety necessarily comes from his career. It is entirely possible that Jake’s anxiety may stem from something else; this could be his upbringing, his relationship with his girlfriend, his finances, etc. Since ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "Jake does not know the source of his anxiety,",
+                annotations: {
+                    italic: true
+                }
+            },
+            {
+                type: "rich_text",
+                text: " we can update the diagram to more accurately reflect what is occurring within Jake:"
+            }
+        ]
+    },
+    {
+        type: "image",
+        src: "./article/anxiety-no-source.jpeg"
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "This diagram helps us illustrate an important question:",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "center_quote",
+        content: [
+            {
+                type: "rich_text",
+                text: "Where is the source of Jake's problem?",
+                annotations: {
+                    italic: true,
+                    bold: true
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Now, if Jake were to begin to try and help himself, he may begin scrolling TikTok, Instagram, or even begin reading self-help books. This self-help process necessarily fails because ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "it targets behaviours, ",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "not the underlying causes of Jakes anxiety.",
+                annotations: {
+                    italic: true,
+                    bold: true
+                }
+            },
+            {
+                type: "rich_text",
+                text: " I call this the self-help loop, because it is cyclical and does not arrive anywhere meaningful.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "image",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        src: "./article/self-help-negative.jpeg",
+        content: [
+            {
+                type: "rich_text",
+                text: "The self-help cycle illustrated as an endless loop.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Because self-help targets behaviours, we fail to learn about the causes of Jakes anxiety. Feelings of anxiety can come from poor sleep (1), gut problems (1), childhood traumas (1), excessive weed (1), lack of sunlight (1), and more. Understandably, this list could go on forever. Where to begin?",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        footnote: {
+            enabled: true,
+            title: "Elaborating on Awareness",
+            blocks: [
+                {
+                    type: "paragraph",
+                    content: [
+                        {
+                            type: "rich_text",
+                            text: "When I say 'awareness', in this case I mean awareness in a spiritual sense. The entire aim of a meditation practice is to become comfortable with your mind, and become aware of its habits, its addictions, and it's thought patterns. With a deeper understanding of yourself, you can begin to let go of the limiting beliefs that prevent you from reaching ",
+                        },
+                        {
+                            type: "link_to_page",
+                            text: "satori.",
+                            src: "https://www.zen-buddhism.net/satori/"
+                        }
+                    ]
+                }
+            ]
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "The way to break out of this cycle is by achieving ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "awareness.",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: " There are various different modalities to achieve this, my favourite being meditation. Some people reach clarity by reading many books. Others by experiencing as much possible. Others by having great conversations with close friends. The point being, that every time you learn something new about the world, your awareness grows. As your awareness grows, you can begin to “hone-in” on the problem, and discover its root cause.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: " This is self-help.",
+                annotations: {
+                    italic: false,
+                    bold: true
+                }
+            },
+        ]
+    },
+    {
+        type: "image",
+        src: "./article/self-help-positive.jpeg"
+    },
+    {
+        type: "h2",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "A Personal Story",
+                annotations: {
+                    italic: false,
+                    bold: true
+                }
+            }
+        ]
+    },
+    {
+        type: "center_quote",
+        social: {
+            enabled: false,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "The beauty of awareness is that once it is achieved, it is difficult to forget.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "I used to have an undiagnosed health problem.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "My issues started in Germany, when I woke up one day with tremors, blurry vision, and brain fog. I remember this clearly, because I checked myself in to the hospital on the day of my 19th birthday. After visits with many different doctors, they concluded that I most likely had multiple sclerosis. Without tests however, they wouldn’t be able to confirm. For the first time in my life, everything came crashing down.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "After some time, I started to get depressed. ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "What was my problem? Why was this happening to me? Was I going to live the rest of my life this way?"
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "What did I do to deserve this?",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "After the worst year of my life, I decided I had to put my life back together on my own. This was a hard lesson to learn — nobody could help me but me. I began reading The Holy Bible, and more spiritual texts like Michael Singer, Joe Dispenza, and Paramahansa Yogananda. They all emphasized the importance of God.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "From there I began reading health literature, and learnt about spontaneous cancer remissions, miraculous recoveries, the importance of sleep, and many other health science books that helped me understand the human body. I began eating healthy, went vegan, exercised, and even worked at a local farmers market. I began to take life seriously.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "carousel",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        items: [
+            {
+                blocks: [
+                    {
+                        type: "image",
+                        src: "./article/food-stand.jpg"
+                    },
+                    {
+                        type: "image",
+                        src: "./article/marcelo-food-stand.jpg"
+                    },
+                    {
+                        type: "image",
+                        src: "./article/food.jpg"
                     }
                 ]
             }
         ]
-    }
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Around this time I began to meditate, and started noticing things about myself that I never noticed before. ",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: "Why is this making me angry? Why is this making me sad? What is the source of my stress? ",
+                annotations: {
+                    italic: true
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "I began observing my reactions. I noticed thought patterns. I noticed limiting beliefs. For the first time, I started paying attention to what was happening inside. The more and more I did this (over many months and years), I began to get lighter. The progress was slow at first, but after a long time I noticed a dramatic shift. I was alert. I was more energetic. I could tell if someone had low energy, or high energy. As my attention drifted inwards, it began to radiate outwards into other areas in my life. Little by little, I was beginning to see…",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "After ~5 years of spiritual work, I am glad to say I am finally healthy once again. Visits to my GP and naturopath all indicate normal levels, and I no longer tremor like I used to.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "Although I still do not understand what caused my body to react the way it did, I overcame an unknown problem by learning about the world and applying my knowledge. As my awareness grew, the clearer everything would become. I began relaxing in the face of existential fear, and overtime learn to overcome it. As I did, my body began to relax, and I could begin the process of recovery.",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "This was awareness in action.",
+                annotations: {
+                    italic: true,
+                    bold: false
+                }
+            }
+        ]
+    },
+    {
+        type: "paragraph",
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
+        },
+        content: [
+            {
+                type: "rich_text",
+                text: "I hope you had as much fun reading this as I did creating it. This interface is an MVP reading application for @buildspace.so. If you’d like to get updates on the application so you can write your own, drop your email below :)",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            }
+        ]
+    },
 ];

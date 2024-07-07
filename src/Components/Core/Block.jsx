@@ -40,6 +40,7 @@ const componentRegistry = {
 const Block = ({ blockData, sidebars }) => {
     const [socialData, setSocialData] = useState({});
     const [footnoteData, setFootnoteData] = useState({});
+    const [componentClicked, setComponentClicked] = useState(null);
 
     if (sidebars == null) sidebars = true;
 
@@ -53,7 +54,7 @@ const Block = ({ blockData, sidebars }) => {
     const renderLSidebar = () => {
         if (sidebars === false) return null;
         return (
-            <div className="w-8 h-full flex flex-col justify-center items-center">
+            <div className="w-10 h-full flex flex-col justify-center items-center">
                 {blockData.footnote?.enabled ?
                     <RewriteDialog Trigger={Info} title={footnoteData.title}>
                         {footnoteData?.blocks?.map(blockData => (
@@ -69,8 +70,8 @@ const Block = ({ blockData, sidebars }) => {
     const renderRSidebar = () => {
         if (sidebars === false) return null;
         return (
-            <div className="w-8 h-full flex flex-col justify-end items-center rounded-xl">
-                {socialData?.enabled &&
+            <div className="w-12 h-full flex flex-col justify-end items-center rounded-xl">
+                {socialData?.enabled && socialData?.numComments !== 0 &&
                     <>
                         <AiOutlineComment className={`${iconStyling} text-neutral-400`} size={"1.7em"}/>
                         <span className="text-neutral-400 text-sm font-medium">{socialData?.numComments || null}</span>
@@ -80,11 +81,14 @@ const Block = ({ blockData, sidebars }) => {
         );
     };
 
+    if (!blockData.type) return null;
     const Component = componentRegistry[blockData.type];
     return (
-        <div className="my-4 w-full flex justify-end items-center">
+        <div
+            className="my-0 py-2 w-full max-w-full flex justify-center items-center  hover:bg-neutral-100x hover:cursor-pointerx transition ease-in-out rounded-lg">
             {renderLSidebar()}
-            <div className={`flex-1 ${sidebars ? 'px-6' : 'px-0'}`}>
+            <div onClick={console.log}
+                 className={`flex-1 ${sidebars ? 'px-6' : 'px-0'}`}>
                 {blockData && <Component key={blockData.id + '-component'} blockData={blockData}/>}
             </div>
             {renderRSidebar()}

@@ -7,31 +7,30 @@ import {
 } from "@/shadcn/components/ui/carousel.jsx";
 import TextContent from "@/Components/Text/TextContent.jsx";
 import { keygen } from "@/api/keygen.js";
+import Block from "@/Components/Core/Block.jsx";
 
 
 // TODO - refactor
 const RewriteCarousel = ({ blockData }) => {
+    const basis = "basis-1/3 pl-";
+    const renderCarouselItem = (block) => {
+        return (
+            <CarouselItem key={keygen()}>
+                <div className="w-full h-full flex content-center flex-col justify-center">
+                    <Block blockData={block}/>
+                </div>
+            </CarouselItem>
+        );
+    };
+
     return (
         <Carousel className={"my-4"}>
             <CarouselContent>
-                {blockData.items.map(item => {
-                    return (
-                        <CarouselItem key={keygen()}>
-                            <div className="w-full h-full">
-                                <div className={"flex content-center flex-col"}>
-                                    <img src={item.src}
-                                         width={1200}
-                                         height={1200}
-                                         alt={'Random image'}
-                                         className="border rounded-sm"/>
-                                </div>
-                                <div className={"mt-2"}>
-                                    {<TextContent content={item.content} className={'text-center'}/>}
-                                </div>
-                            </div>
-                        </CarouselItem>
-                    );
-                })}
+                {blockData.items.map(item => (
+                    item.blocks.map(block => (
+                        renderCarouselItem(block)
+                    ))
+                ))}
             </CarouselContent>
             <CarouselPrevious/>
             <CarouselNext/>
