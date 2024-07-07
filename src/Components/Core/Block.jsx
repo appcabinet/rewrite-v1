@@ -13,12 +13,11 @@ import { AiOutlineEllipsis } from "react-icons/ai";
 import RewriteSheet from "@/Components/Complex/RewriteSheet.jsx";
 import RewritePanel from "@/Components/Complex/RewritePanel.jsx";
 import RewriteDialog from "@/Components/Complex/RewriteDialog.jsx";
-import { Button } from "@/shadcn/components/ui/button.jsx";
 import Info from "@/Components/Interactive/Info.jsx";
-import { Image } from "lucide-react";
 import StandardImage from "@/Components/Misc/StandardImage.jsx";
 import Centerquote from "@/Components/Text/Centerquote.jsx";
 import Embed from "@/Components/Complex/Embed.jsx";
+import Footnote from "@/Components/Interactive/Footnote.jsx";
 
 
 const componentRegistry = {

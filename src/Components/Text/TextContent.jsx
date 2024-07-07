@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { keygen } from "@/api/keygen.js";
+import ContentLinkToPage from "@/Components/Text/ContentLinkToPage.jsx";
+import Footnote from "@/Components/Interactive/Footnote.jsx";
+
 
 const TextContent = ({ content, className }) => {
     if (!content) return null;
@@ -23,11 +26,11 @@ const TextContent = ({ content, className }) => {
         }, chunk.text);
 
         if (chunk.type === 'link_to_page') {
-            return React.createElement(
-                'a',
-                { key: keygen(), className: "text-orange-500 hover:underline", href: chunk.href },
-                ...annotatedText
-            );
+            return <ContentLinkToPage chunk={chunk}>{annotatedText}</ContentLinkToPage>;
+        }
+
+        if (chunk.type === 'footnote') {
+            return <Footnote reference_id={chunk.reference_id}/>;
         }
 
         return annotatedText;

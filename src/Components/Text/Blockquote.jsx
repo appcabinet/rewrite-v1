@@ -8,10 +8,12 @@ export const Blockquote = ({ blockData }) => {
                 <TextContent content={blockData.content} className={"text-lg text-gray-950 ps-0"}/>
             </blockquote>
             {blockData.source &&
-                <a href={blockData.source}
-                   className="text-right my-0 text-gray-400 font-light hover:text-blue-500 hover:underline hover:cursor-pointer">
-                    Source
-                </a>
+                <div className={"flex justify-end"}>
+                    <a href={blockData.source}
+                       className="text-right my-0 text-gray-400 font-light hover:text-blue-500 hover:underline hover:cursor-pointer">
+                        Source
+                    </a>
+                </div>
             }
         </div>
     );

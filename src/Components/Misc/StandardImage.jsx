@@ -11,7 +11,7 @@ const StandardImage = ({ blockData }) => {
                 alt={''}
             />
             <div className={"mt-2"}>
-                <TextContent content={blockData.content} className={'text-center text-neutral-700'}/>
+                <TextContent content={blockData.content} className={'text-center text-neutral-500'}/>
             </div>
         </div>
     );

@@ -103,6 +103,7 @@ export const Blocks = [
     {
         id: 3,
         type: "block_quote",
+        source: "https://en.wikipedia.org/wiki/A_History_of_God",
         social: {
             enabled: true,
             numComments: 12,
@@ -127,13 +128,10 @@ export const Blocks = [
             numComments: 1,
             comments: [],
         },
-        footnote: {
-            enabled: true,
-        },
         content: [
             {
                 type: "rich_text",
-                text: "For hundreds of thousands of years human beings have co-evolved with the concept of God. The symbolic story of Adam and Eve represents humans coming to consciousness (and therefore self-consciousness) after the creation of heaven and earth. Echoes of similar creation myths can be found across history and other religions such as Pandoras box, the Enuma Eilish, and many more."
+                text: "For thousands of years human beings have co-evolved with the idea of God. The symbolic story of Adam and Eve represents humans coming to consciousness after the creation of heaven and earth. Echoes of similar creation myths can be found across history and other religions such as Pandoras box, the Enuma Eilish, and many more."
             }
         ]
     },
@@ -150,7 +148,7 @@ export const Blocks = [
         },
         items: [
             {
-                title: "Religious Burials",
+                title: "Religious Burials - 100,000 Years Old",
                 blocks: [
                     {
                         id: 11,
@@ -158,20 +156,15 @@ export const Blocks = [
                         content: [
                             {
                                 type: "rich_text",
-                                text: "Although the first instances of religious devotion is entirely conjectural, the earliest known intentional burials are found at the site of ",
+                                text: "Although the first instances of religious devotion is entirely conjectural, the earliest known intentional burials are found at the site of Qazfeh",
                                 annotations: {
                                     bold: false,
                                     italic: false,
                                 }
                             },
                             {
-                                type: "link_to_page",
-                                text: "Qazfeh",
-                                href: "https://www.britannica.com/place/Qafzeh",
-                                annotations: {
-                                    bold: false,
-                                    italic: false,
-                                }
+                                type: "footnote",
+                                reference_id: "qazfeh",
                             },
                             {
                                 type: "rich_text",
@@ -184,23 +177,24 @@ export const Blocks = [
                         ]
                     },
                     {
+                        id: 25,
                         type: "image",
-                        src: "https://picsum.photos/200/200",
+                        src: "./article/img-9-small480.jpg",
                         content: [
                             {
                                 type: "rich_text",
-                                text: "This is a caption",
-                                annotations: {
-                                    bold: true,
-                                    italic: false,
-                                },
+                                text: "Qazfeh 11 burial picture and drawing. Source: ",
+                            },
+                            {
+                                type: "link_to_page",
+                                text: "https://journals.openedition.org/paleo/4848"
                             }
                         ]
                     },
                 ]
             },
             {
-                title: "Göbekli Tepe",
+                title: "Göbekli Tepe - 10,000 Years Old",
                 blocks: [
                     {
                         id: 12,
@@ -208,7 +202,7 @@ export const Blocks = [
                         content: [
                             {
                                 type: "rich_text",
-                                text: "Göbekli Tepe, which was originally mistaken to be a cemetery, was re-excavated in 1993 and discovered to be one of the oldest religious ritual sites ever discovered. Described as a “Cathedral on a hill” by the excavator "
+                                text: "Göbekli Tepe was re-excavated in 1993 and discovered to be one of the oldest religious ritual sites ever discovered. Described as a “Cathedral on a hill” by the excavator "
                             },
                             {
                                 type: "rich_text",
@@ -217,15 +211,28 @@ export const Blocks = [
                             {
                                 type: "rich_text",
                                 text: ", Göbekli Tepe contains over 20 circular stone enclosures, each containing monumental T-shaped limestone pillars weighing over 16 tons. Religious iconography remains etched into the pillars, with reliefs of animals in various different forms found throughout the site. At over 10,000 years old, this is the oldest of its kind ever discovered.",
+                            },
+                            {
+                                type: "footnote",
+                                reference_id: "gobekli-tepe"
                             }
                         ]
                     },
                     {
-                        id: 25,
+                        id: 96,
                         type: "image",
-                        src: "https://picsum.photos/200/200",
-                        content: []
-                    },
+                        src: "./article/gobekli-tepe.jpg",
+                        content: [
+                            {
+                                type: "rich_text",
+                                text: "Göbekli Tepe. Source: ",
+                            },
+                            {
+                                type: "link_to_page",
+                                text: "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe"
+                            }
+                        ]
+                    }
                 ]
             },
         ]
@@ -290,6 +297,7 @@ export const Blocks = [
     {
         id: 20,
         type: "block_quote",
+        source: "https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind",
         social: {
             enabled: true,
             numComments: 12,
@@ -361,17 +369,26 @@ export const Blocks = [
             numComments: 0,
             comments: []
         },
-        footnote: {
-            enabled: true
-        },
         content: [
             {
                 type: "rich_text",
-                text: "After the enlightenment, the West supplanted God with science and philosophy with the realization that “large and consistent moral theories could exist without reference to God” (1). Thereafter, humanity and many in the west began to look for meaning in other systems; this lead to the creation of communism, nazism, nationalism, and other governing ideologies as man searched for meaning in a world without a divine ruler. Fast-forward to 2024, the west finds itself in a world without religion, grappling with the existential task of defining our own values.",
+                text: "After the enlightenment, the West supplanted God with science and philosophy with the realization that “large and consistent moral theories could exist without reference to God",
                 annotations: {
                     italic: false,
                 }
             },
+            {
+                type: "footnote",
+                reference_id: "nietzsche-god",
+            },
+            {
+                type: "rich_text",
+                text: ". Thereafter, humanity and many in the west began to look for meaning in other systems; this lead to the creation of communism, nazism, nationalism, and other governing ideologies as man searched for meaning in a world without a divine ruler. Fast-forward to 2024, the west finds itself in a world without religion, grappling with the existential task of defining our own values.",
+                annotations: {
+                    italic: false,
+                }
+            },
+
 
         ]
     },
@@ -425,8 +442,24 @@ export const Blocks = [
                     content: [
                         {
                             type: "rich_text",
-                            text: "The first mainstream occurrence of the term “self help” was in 1859 (1). However, personal development has been a part of human literature for millennia (1). Although the concept isn’t new, the way we approach personal development has drastically changed in the age of the internet. Self-help gurus are ready to sell you their courses. Self-help advice floods our social media feeds. Beyond content, there exist thousands of apps, tools, websites, courses, online therapy, and other modalities ready to help you — and ready to take your money. The age of the internet has left us feeling inadequate, and with the feeling that there is yet more for us to do.",
-                        }
+                            text: "The first mainstream occurrence of the term “self help” was in 1859",
+                        },
+                        {
+                            type: "footnote",
+                            reference_id: "self-help-origin",
+                        },
+                        {
+                            type: "rich_text",
+                            text: ". However, personal development has been a part of human literature for millennia",
+                        },
+                        {
+                            type: "footnote",
+                            reference_id: "self-help-millenia",
+                        },
+                        {
+                            type: "rich_text",
+                            text: ". Although the concept isn’t new, the way we approach personal development has drastically changed in the age of the internet. Self-help gurus are ready to sell you their courses. Self-help advice floods our social media feeds. Beyond content, there exist thousands of apps, tools, websites, courses, online therapy, and other modalities ready to help you — and ready to take your money. The age of the internet has left us feeling inadequate, and with the feeling that there is yet more for us to do.",
+                        },
                     ]
                 }
             ]
@@ -434,7 +467,31 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "In the west, we have largely replaced Christian values with capitalist values. This is not at all a bad thing — capitalism has brought us tremendous benefits and has lowered baseline poverty all around the world (1). However, no system is perfect. Because we live in a world without God, capitalism’s laissez faire approach to the economy also obscures a more insidious agenda, which seeks to exploit and capitalize on our innate human need for improvement — something religion once provided. In the early days, “gurus” began teaching others how to become rich in deceptive “get rich quick” schemes. Pickup artists made their claim to fame by teaching depressed men how to emotionally manipulate women (Jordan Peterson classified this behaviour as psychopathic [get resource]). Gary Vaynerchuk popularized hustle culture, even advocating that people work 18 hour days (no, thanks). The list goes on: biohacking, digital minimalism, “Law of attraction” coaches and more. The once deification of our priests, prophets, and Gods alike gave way to the new era of influencers, aiming to help (and oftentimes exploit) a vast many people under the pre-tense of self-help."
+                text: "In the west, we have largely replaced Christian values with capitalist values. This is not at all a bad thing — capitalism has brought us tremendous benefits and has lowered baseline poverty all around the world",
+            },
+            {
+                type: "footnote",
+                reference_id: "capitalist-manifesto",
+            },
+            {
+                type: "rich_text",
+                text: ". However, no system is perfect. Because we live in a world without God, capitalism’s laissez faire approach to the economy also obscures a more insidious agenda, which seeks to exploit and capitalize on our innate human need for improvement — something religion once provided. In the early days, “gurus” began teaching others how to become rich in deceptive “get rich quick” schemes. Pickup artists made their claim to fame by teaching depressed men how to emotionally manipulate women (Jordan Peterson classified this behaviour as psychopathic",
+            },
+            {
+                type: "footnote",
+                reference_id: "pickup-psychopath",
+            },
+            {
+                type: "rich_text",
+                text: "). Gary Vaynerchuk popularized hustle culture",
+            },
+            {
+                type: "footnote",
+                reference_id: "hustle-culture",
+            },
+            {
+                type: "rich_text",
+                text: ", even advocating that people work 18 hour days (no, thanks). The list goes on: biohacking, digital minimalism, “Law of attraction” coaches and more. The once deification of our priests, prophets, and Gods alike gave way to the new era of influencers, aiming to help (and oftentimes exploit) a vast many people under the pre-tense of self-help."
             }
         ]
     },
@@ -653,7 +710,19 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "Socrates himself was against writing. In his mind, written words “preserve a solemn silence” (1) when asked a question, and therefore fail to convey true Knowledge. The internet is much the same — ",
+                text: "Socrates himself was against writing. In his mind, written words “preserve a solemn silence”",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "footnote",
+                reference_id: "socrates-writing",
+            },
+            {
+                type: "rich_text",
+                text: " when asked a question, and therefore fail to convey true Knowledge. The internet is much the same — ",
                 annotations: {
                     italic: false,
                     bold: false
@@ -1038,6 +1107,10 @@ export const Blocks = [
                 }
             },
             {
+                type: "footnote",
+                reference_id: "meditation-article"
+            },
+            {
                 type: "rich_text",
                 text: "). From this we can deduce the following:",
                 annotations: {
@@ -1099,7 +1172,19 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "As we begin to alter our perceptions, our minds and bodies will respond naturally. According to a study by Boston University, optimists are more likely to achieve “exceptional longevity” and are found to live 11 to 15 percent longer (1). This is obvious — optimists have a positive perception of the world, and what follows is a healthy physiological response from the body.",
+                text: "As we begin to alter our perceptions, our minds and bodies will respond naturally. According to a study by Boston University, optimists are more likely to achieve “exceptional longevity” and are found to live 11 to 15 percent longer",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "footnote",
+                reference_id: "optimism-longevity"
+            },
+            {
+                type: "rich_text",
+                text: ". This is obvious — optimists have a positive perception of the world, and what follows is a healthy physiological response from the body.",
                 annotations: {
                     italic: false,
                     bold: false
@@ -1242,12 +1327,52 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "Because self-help targets behaviours, we fail to learn about the causes of Jakes anxiety. Feelings of anxiety can come from poor sleep (1), gut problems (1), childhood traumas (1), excessive weed (1), lack of sunlight (1), and more. Understandably, this list could go on forever. Where to begin?",
+                text: "Because self-help targets behaviours, we fail to learn about the causes of Jakes anxiety. Feelings of anxiety can come from poor sleep",
                 annotations: {
                     italic: false,
                     bold: false
                 }
-            }
+            },
+            {
+                type: "rich_text",
+                text: ", gut problems",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: ", childhood traumas",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: ", excessive weed",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: ", lack of sunlight",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
+            {
+                type: "rich_text",
+                text: ", and more. Understandably, this list could go on forever. Where to begin?",
+                annotations: {
+                    italic: false,
+                    bold: false
+                }
+            },
         ]
     },
     {
@@ -1314,7 +1439,13 @@ export const Blocks = [
     },
     {
         type: "image",
-        src: "./article/self-help-positive.jpeg"
+        src: "./article/self-help-positive.jpeg",
+        content: [
+            {
+                type: "rich_text",
+                text: "Awareness as a means of helping yourself.",
+            }
+        ]
     },
     {
         type: "h2",
