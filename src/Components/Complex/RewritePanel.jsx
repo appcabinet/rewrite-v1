@@ -7,15 +7,18 @@ import H2 from "@/Components/Text/Headers/H2.jsx";
 
 const RewritePanel = ({ blockData }) => {
     const items = blockData.items;
-    // const [items, setItems] = useState([]);
 
-    // useEffect(() => {
-    //     setItems(blockData?.items);
-    // }, [blockData]);
+    const stopPropagation = (e) => {
+        e.stopPropagation();
+    };
 
     const renderTabTriggers = () => {
         return items?.map(item => (
-            <TabsTrigger key={keygen()} value={valuegen(item.title)}>
+            <TabsTrigger
+                key={keygen()}
+                value={valuegen(item.title)}
+                onClick={stopPropagation}
+            >
                 {item.title}
             </TabsTrigger>
         ));

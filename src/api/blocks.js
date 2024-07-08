@@ -1104,6 +1104,7 @@ export const Blocks = [
             {
                 type: "link_to_page",
                 text: "here",
+                href: "https://www.marcelo.app/p/the-meditators-journey",
                 annotations: {
                     italic: false,
                     bold: false

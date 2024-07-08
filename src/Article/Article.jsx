@@ -6,15 +6,17 @@ import { Blocks } from '../api/blocks.js';
 import ArticleHeader from "@/Components/Text/Headers/ArticleHeader.jsx";
 import Attribution from "@/Components/Misc/Attribution.jsx";
 import { footnotesAtom } from "@/atoms/footnotesAtom.js";
-import { useAtomValue, useSetAtom } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { globalFootnotes } from "@/api/globalFootnotes.js";
 import RewriteSheet from "@/Components/Complex/RewriteSheet.jsx";
 import { selectedBlockAtom } from "@/atoms/selectedBlockAtom.js";
+import { articleAtom } from "@/atoms/articleAtom.js";
 
 const Article = () => {
     const [blocks, setBlocks] = useState([]);
-    const [articleData, setArticleData] = useState({});
     const [dialogOpen, setDialogOpen] = useState(false);
+
+    const [articleData, setArticleData] = useAtom(articleAtom);
     const selectedBlock = useAtomValue(selectedBlockAtom);
     const setFootnotes = useSetAtom(footnotesAtom);
 
@@ -31,7 +33,7 @@ const Article = () => {
                 <div className="article-root my-12 ">
                     <RewriteSheet blockData={selectedBlock} open={dialogOpen} onOpenChange={setDialogOpen}/>
                     <ArticleHeader className="text-black">
-                        {articleData.title}
+                        {articleData?.title}
                     </ArticleHeader>
                     <Attribution>
                         by: {articleData?.author?.name}

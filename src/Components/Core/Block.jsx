@@ -19,28 +19,26 @@ import { AiOutlineComment } from "react-icons/ai";
 
 import { useSetAtom } from "jotai";
 import { selectedBlockAtom } from "@/atoms/selectedBlockAtom.js";
+import { permittedSocialTypes } from "@/helpers.js";
 
 
-const componentRegistry = {
+export const componentRegistry = {
     h1: H1,
     h2: H2,
     h3: H3,
     paragraph: Paragraph,
     block_quote: Blockquote,
-    link_to_page: LinkToPage,
+    center_quote: Centerquote,
+    image: StandardImage,
     carousel: RewriteCarousel,
     sheet: RewriteSheet,
     panel: RewritePanel,
-    dialog: RewriteDialog,
-    image: StandardImage,
-    center_quote: Centerquote,
     embed: Embed,
 };
 
 const Block = ({ blockData, sidebars, setOpen }) => {
     const [socialData, setSocialData] = useState({});
     const [footnoteData, setFootnoteData] = useState({});
-    const [isHovered, setIsHovered] = useState(false);
     const setSelectedBlock = useSetAtom(selectedBlockAtom);
 
     if (sidebars == null) sidebars = true;
@@ -49,14 +47,6 @@ const Block = ({ blockData, sidebars, setOpen }) => {
         setSocialData(blockData.social);
         setFootnoteData(blockData.footnote);
     }, []);
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
 
     const handleMouseClick = (event) => {
         setSelectedBlock(blockData);
@@ -79,17 +69,35 @@ const Block = ({ blockData, sidebars, setOpen }) => {
         );
     };
 
+    const renderCenterDiv = () => {
+        let conditionalStyle = '';
+
+        if (permittedSocialTypes.includes(blockData.type)) {
+            conditionalStyle = 'hover:cursor-pointer';
+        }
+
+        const Component = componentRegistry[blockData.type];
+
+        return (
+            <div className={`flex-1 px-4 ${conditionalStyle}`}
+                 onClick={handleMouseClick}
+            >
+                {blockData &&
+                    <Component key={blockData.id + '-component'}
+                               blockData={blockData}
+                    />
+                }
+            </div>
+        );
+    };
+
     const renderRSidebar = () => {
         if (sidebars === false) return null;
-
         const sidebarCondition = socialData?.enabled && socialData?.numComments !== 0;
-
         return (
             <div
                 className={`w-14 h-full flex space justify-between items-center rounded-xl transition duration-100 ease-in-out hover:cursor-pointer text-neutral-400`}>
-                <div
-                    className={`flex items-center transition duration-100 hover:text-neutral-500`}
-                >
+                <div className={`flex items-center transition duration-100 hover:text-neutral-500`}>
                     {sidebarCondition &&
                         <>
                             <AiOutlineComment className={`mx-1`} size={"1.7em"} onClick={handleMouseClick}/>
@@ -102,19 +110,13 @@ const Block = ({ blockData, sidebars, setOpen }) => {
         );
     };
 
+
     if (!blockData.type) return null;
-    const Component = componentRegistry[blockData.type];
     return (
         <div
             className="my-0 py-2 w-full max-w-full flex justify-center items-center rounded-lg">
             {renderLSidebar()}
-            <div className={`flex-1 px-4 hover:cursor-pointer`}
-                 onMouseEnter={handleMouseEnter}
-                 onMouseLeave={handleMouseLeave}
-                 onClick={handleMouseClick}
-            >
-                {blockData && <Component key={blockData.id + '-component'} blockData={blockData}/>}
-            </div>
+            {renderCenterDiv()}
             {renderRSidebar()}
         </div>
     );
