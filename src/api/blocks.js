@@ -726,7 +726,7 @@ export const Blocks = [
             },
             {
                 type: "rich_text",
-                text: " when asked a question, and therefore fail to convey true Knowledge. The internet is much the same — ",
+                text: " when asked a question, and therefore fail to convey true Knowledge. Internet advice is much the same — ",
                 annotations: {
                     italic: false,
                     bold: false

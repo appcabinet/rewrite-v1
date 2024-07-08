@@ -1,3 +1,5 @@
+import { useEffect, useMemo, useState } from "react";
+
 import H1 from "@/Components/Text/Headers/H1.jsx";
 import H2 from "@/Components/Text/Headers/H2.jsx";
 import H3 from "@/Components/Text/Headers/H3.jsx";
@@ -5,21 +7,18 @@ import Blockquote from "@/Components/Text/Blockquote.jsx";
 import LinkToPage from "@/Components/Text/LinkToPage.jsx";
 import RewriteCarousel from "@/Components/Complex/RewriteCarousel.jsx";
 import Paragraph from "@/Components/Text/Paragraph.jsx";
-import { useEffect, useMemo, useState } from "react";
-
-import { AiOutlineComment } from "react-icons/ai";
-import { AiOutlineInfoCircle } from "react-icons/ai";
-import { AiOutlineEllipsis } from "react-icons/ai";
 import RewriteSheet from "@/Components/Complex/RewriteSheet.jsx";
 import RewritePanel from "@/Components/Complex/RewritePanel.jsx";
 import RewriteDialog from "@/Components/Complex/RewriteDialog.jsx";
-import Info from "@/Components/Interactive/Info.jsx";
 import StandardImage from "@/Components/Misc/StandardImage.jsx";
 import Centerquote from "@/Components/Text/Centerquote.jsx";
 import Embed from "@/Components/Complex/Embed.jsx";
-import Footnote from "@/Components/Interactive/Footnote.jsx";
-import { Bookmark } from "lucide-react";
-import { comment } from "postcss";
+
+import Info from "@/Components/Interactive/Info.jsx";
+import { AiOutlineComment } from "react-icons/ai";
+
+import { useSetAtom } from "jotai";
+import { selectedBlockAtom } from "@/atoms/selectedBlockAtom.js";
 
 
 const componentRegistry = {
@@ -38,15 +37,11 @@ const componentRegistry = {
     embed: Embed,
 };
 
-const Block = ({ blockData, sidebars }) => {
+const Block = ({ blockData, sidebars, setOpen }) => {
     const [socialData, setSocialData] = useState({});
     const [footnoteData, setFootnoteData] = useState({});
     const [isHovered, setIsHovered] = useState(false);
-    const [commentIconStyling, setCommentIconStyling] = useState('text-neutral-300');
-    const [isClicked, setIsClicked] = useState(false);
-
-    const iconStyling = `text-neutral-300`;
-    const iconHoveredStyling = `text-neutral-500`;
+    const setSelectedBlock = useSetAtom(selectedBlockAtom);
 
     if (sidebars == null) sidebars = true;
 
@@ -57,11 +52,15 @@ const Block = ({ blockData, sidebars }) => {
 
     const handleMouseEnter = () => {
         setIsHovered(true);
-        setCommentIconStyling('text-neutral-500');
     };
+
     const handleMouseLeave = () => {
         setIsHovered(false);
-        setCommentIconStyling('text-neutral-300');
+    };
+
+    const handleMouseClick = (event) => {
+        setSelectedBlock(blockData);
+        setOpen(true);
     };
 
     const renderLSidebar = () => {
@@ -83,19 +82,21 @@ const Block = ({ blockData, sidebars }) => {
     const renderRSidebar = () => {
         if (sidebars === false) return null;
 
-        const sidebarCondition = socialData?.enabled && (socialData?.numComments !== 0 || isHovered);
+        const sidebarCondition = socialData?.enabled && socialData?.numComments !== 0;
 
         return (
             <div
-                className={`w-36 h-full flex space justify-between items-center rounded-xl transition duration-100 ease-in-out ${isHovered ? 'text-neutral-500' : 'text-neutral-400'} hover:cursor-pointer`}>
+                className={`w-14 h-full flex space justify-between items-center rounded-xl transition duration-100 ease-in-out hover:cursor-pointer text-neutral-400`}>
                 <div
-                    className={`flex items-center transition duration-100 ${
-                        sidebarCondition ? 'opacity-100' : 'opacity-0'
-                    } hover:text-neutral-500`}
+                    className={`flex items-center transition duration-100 hover:text-neutral-500`}
                 >
-                    <AiOutlineComment className={`mx-1`} size={"1.7em"}/>
-                    <span
-                        className="text-sm font-medium">{socialData?.numComments || null}</span>
+                    {sidebarCondition &&
+                        <>
+                            <AiOutlineComment className={`mx-1`} size={"1.7em"} onClick={handleMouseClick}/>
+                            <span
+                                className="text-sm font-medium">{socialData?.numComments || null}</span>
+                        </>
+                    }
                 </div>
             </div>
         );
@@ -110,7 +111,7 @@ const Block = ({ blockData, sidebars }) => {
             <div className={`flex-1 px-4 hover:cursor-pointer`}
                  onMouseEnter={handleMouseEnter}
                  onMouseLeave={handleMouseLeave}
-                 onClick={() => setIsClicked(true)}
+                 onClick={handleMouseClick}
             >
                 {blockData && <Component key={blockData.id + '-component'} blockData={blockData}/>}
             </div>

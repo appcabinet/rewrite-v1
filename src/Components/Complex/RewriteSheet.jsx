@@ -8,13 +8,12 @@ import {
 } from "@/shadcn/components/ui/sheet";
 import { useState } from "react";
 
-const RewriteSheet = ({ sheet }) => {
-    const [sheetData, setSheetData] = useState();
+const RewriteSheet = ({ blockData, ...props }) => {
+    const [socialData, setSocialData] = useState(blockData?.social);
 
     return (
-        <Sheet>
-            <SheetTrigger>Open</SheetTrigger>
-            <SheetContent>
+        <Sheet {...props}>
+            <SheetContent className={"w-[1200px] sm:w-[1200px]"}>
                 <SheetHeader>
                     <SheetTitle>Are you absolutely sure?</SheetTitle>
                     <SheetDescription>
