@@ -2,7 +2,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { Button } from "@/shadcn/components/ui/button.jsx";
 
 const Info = ({ props }) => {
-    const iconStyling = "text-orange-400 hover:cursor-pointer transition duration-300 ease-in-out";
+    const iconStyling = "text-orange-400 hover:text-orange-500 hover:cursor-pointer transition duration-300 ease-in-out";
 
     return (
         <Button size={'icon'} className={"bg-transparent hover:bg-transparent"} {...props}>

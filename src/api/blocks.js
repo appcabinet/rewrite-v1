@@ -139,7 +139,6 @@ export const Blocks = [
         id: 10,
         type: "panel",
         social: {
-            enabled: false,
             numComments: 4,
             comments: []
         },
@@ -242,6 +241,11 @@ export const Blocks = [
         type: "paragraph",
         footnote: {
             enabled: true
+        },
+        social: {
+            enabled: true,
+            numComments: 0,
+            comments: []
         },
         content: [
             {
@@ -926,7 +930,6 @@ export const Blocks = [
     {
         type: "h2",
         social: {
-            enabled: false,
             numComments: 0,
             comments: []
         },
@@ -1468,7 +1471,6 @@ export const Blocks = [
     {
         type: "center_quote",
         social: {
-            enabled: false,
             numComments: 0,
             comments: []
         },

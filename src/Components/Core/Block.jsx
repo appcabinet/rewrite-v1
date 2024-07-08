@@ -5,7 +5,7 @@ import Blockquote from "@/Components/Text/Blockquote.jsx";
 import LinkToPage from "@/Components/Text/LinkToPage.jsx";
 import RewriteCarousel from "@/Components/Complex/RewriteCarousel.jsx";
 import Paragraph from "@/Components/Text/Paragraph.jsx";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { AiOutlineComment } from "react-icons/ai";
 import { AiOutlineInfoCircle } from "react-icons/ai";
@@ -19,6 +19,7 @@ import Centerquote from "@/Components/Text/Centerquote.jsx";
 import Embed from "@/Components/Complex/Embed.jsx";
 import Footnote from "@/Components/Interactive/Footnote.jsx";
 import { Bookmark } from "lucide-react";
+import { comment } from "postcss";
 
 
 const componentRegistry = {
@@ -41,11 +42,13 @@ const Block = ({ blockData, sidebars }) => {
     const [socialData, setSocialData] = useState({});
     const [footnoteData, setFootnoteData] = useState({});
     const [isHovered, setIsHovered] = useState(false);
-    const [componentClicked, setComponentClicked] = useState(null);
+    const [commentIconStyling, setCommentIconStyling] = useState('text-neutral-300');
+    const [isClicked, setIsClicked] = useState(false);
+
+    const iconStyling = `text-neutral-300`;
+    const iconHoveredStyling = `text-neutral-500`;
 
     if (sidebars == null) sidebars = true;
-
-    const iconStyling = "text-neutral-400 hover:cursor-pointer hover:text-gray-600 transition duration-300 ease-in-out";
 
     useEffect(() => {
         setSocialData(blockData.social);
@@ -53,15 +56,13 @@ const Block = ({ blockData, sidebars }) => {
     }, []);
 
     const handleMouseEnter = () => {
-        console.log('hovered');
         setIsHovered(true);
+        setCommentIconStyling('text-neutral-500');
     };
-
     const handleMouseLeave = () => {
-        console.log('unhovered');
         setIsHovered(false);
+        setCommentIconStyling('text-neutral-300');
     };
-
 
     const renderLSidebar = () => {
         if (sidebars === false) return null;
@@ -81,25 +82,21 @@ const Block = ({ blockData, sidebars }) => {
 
     const renderRSidebar = () => {
         if (sidebars === false) return null;
+
+        const sidebarCondition = socialData?.enabled && (socialData?.numComments !== 0 || isHovered);
+
         return (
-            <div className="w-36 h-full flex space justify-between items-center rounded-xl">
-                {isHovered &&
-                    <>
-                        <div className={"flex items-center"}>
-                            <AiOutlineComment className={`${iconStyling} mx-1 text-neutral-400`} size={"1.7em"}/>
-                            <span
-                                className="text-neutral-400 text-sm font-medium">{socialData?.numComments || null}</span>
-                        </div>
-                        <div className={"flex items-center"}>
-                            <Bookmark className={`${iconStyling} mx-1 text-neutral-400`} size={"1.5em"}/>
-                            <span
-                                className="text-neutral-400 text-sm font-medium">4</span>
-                        </div>
-                        <div className={"flex items-center"}>
-                            <AiOutlineEllipsis className={`${iconStyling} mx-1 text-neutral-400`} size={"1.7em"}/>
-                        </div>
-                    </>
-                }
+            <div
+                className={`w-36 h-full flex space justify-between items-center rounded-xl transition duration-100 ease-in-out ${isHovered ? 'text-neutral-500' : 'text-neutral-400'} hover:cursor-pointer`}>
+                <div
+                    className={`flex items-center transition duration-100 ${
+                        sidebarCondition ? 'opacity-100' : 'opacity-0'
+                    } hover:text-neutral-500`}
+                >
+                    <AiOutlineComment className={`mx-1`} size={"1.7em"}/>
+                    <span
+                        className="text-sm font-medium">{socialData?.numComments || null}</span>
+                </div>
             </div>
         );
     };
@@ -108,13 +105,13 @@ const Block = ({ blockData, sidebars }) => {
     const Component = componentRegistry[blockData.type];
     return (
         <div
-            className="my-0 py-2 w-full max-w-full flex justify-center items-center hover:cursor-pointer transition ease-in-out rounded-lg"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
+            className="my-0 py-2 w-full max-w-full flex justify-center items-center rounded-lg">
             {renderLSidebar()}
-            <div onClick={console.log}
-                 className={`flex-1 px-4`}>
+            <div className={`flex-1 px-4 hover:cursor-pointer`}
+                 onMouseEnter={handleMouseEnter}
+                 onMouseLeave={handleMouseLeave}
+                 onClick={() => setIsClicked(true)}
+            >
                 {blockData && <Component key={blockData.id + '-component'} blockData={blockData}/>}
             </div>
             {renderRSidebar()}
