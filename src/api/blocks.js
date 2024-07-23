@@ -106,7 +106,7 @@ export const Blocks = [
         source: "https://en.wikipedia.org/wiki/A_History_of_God",
         social: {
             enabled: true,
-            numComments: 12,
+            numComments: 0,
             comments: []
         },
         content: [
@@ -698,7 +698,7 @@ export const Blocks = [
                 type: "rich_text",
                 text: "Self-help isn’t self-help. It involves unidirectional advice that fails to take into account your current life circumstances.",
                 annotations: {
-                    bold: true,
+                    bold: false,
                     italic: true,
                 }
             }

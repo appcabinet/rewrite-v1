@@ -32,12 +32,14 @@ const Article = () => {
             <div className="mt-12 w-full flex justify-center content-center">
                 <div className="article-root my-12 ">
                     <RewriteSheet blockData={selectedBlock} open={dialogOpen} onOpenChange={setDialogOpen}/>
-                    <ArticleHeader className="text-black">
-                        {articleData?.title}
-                    </ArticleHeader>
-                    <Attribution>
-                        by: {articleData?.author?.name}
-                    </Attribution>
+                    <div className={"mx-14"}>
+                        <ArticleHeader className="text-black">
+                            {articleData?.title}
+                        </ArticleHeader>
+                        <Attribution>
+                            by: {articleData?.author?.name}
+                        </Attribution>
+                    </div>
                     {blocks.map(blockData => (
                         <Block key={blockData.id + '-block'} blockData={blockData} setOpen={setDialogOpen}/>
                     ))}
