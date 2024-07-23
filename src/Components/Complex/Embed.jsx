@@ -51,8 +51,8 @@ const Embed = ({ blockData }) => {
     return (
         <div
             ref={containerRef}
-            className={"relative"}/>
-        // dangerouslySetInnerHTML={{ __html: embedString }}/>
+            className={"relative"}
+            dangerouslySetInnerHTML={{ __html: embedString }}/>
     );
 
 };

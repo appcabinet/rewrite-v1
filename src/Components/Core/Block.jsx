@@ -20,6 +20,7 @@ import { AiOutlineComment } from "react-icons/ai";
 import { useSetAtom } from "jotai";
 import { selectedBlockAtom } from "@/atoms/selectedBlockAtom.js";
 import { permittedSocialTypes } from "@/helpers.js";
+import EmailSignUp from "@/Components/Interactive/Email.jsx";
 
 
 export const componentRegistry = {
@@ -34,6 +35,7 @@ export const componentRegistry = {
     sheet: RewriteSheet,
     panel: RewritePanel,
     embed: Embed,
+    email_signup: EmailSignUp,
 };
 
 const Block = ({ blockData, sidebars, setOpen }) => {
