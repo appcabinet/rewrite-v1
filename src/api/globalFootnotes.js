@@ -63,4 +63,9 @@ export const globalFootnotes = [
         source: "https://www.bu.edu/articles/2019/optimists-live-longer/",
         index: 11,
     },
+    {
+        id: "40-workdays",
+        source: "https://www.linkedin.com/posts/marcelo-mantilla-080410143_leverage-is-the-root-of-all-productivity-activity-7168613239147233280-G3So",
+        index: 12,
+    }
 ];

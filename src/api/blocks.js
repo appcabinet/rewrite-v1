@@ -27,21 +27,27 @@ export const Blocks = [
                     content: [
                         {
                             type: "rich_text",
-                            text: "",
+                            text: "Perhaps our fascination with fireworks has something to do with an appeal to the divine. Since many of us have never seen northern lights, or a clear night sky, perhaps fireworks serve to fulfill our intrinsic desire for God. Why else would they have been invented?",
                             annotations: {
                                 bold: false,
                                 italic: false,
                             }
-                        },
+                        }
+                    ]
+                },
+                {
+                    type: "image",
+                    id: 999,
+                    src: "./article/fireworks.gif",
+                    content: [
                         {
-                            type: "link_to_page",
-                            text: "here.",
-                            href: "https://www.britannica.com/biography/Carl-Jung",
+                            type: "rich_text",
+                            text: "Fireworks display during Canada Day in Bronte, Ontario.",
                             annotations: {
                                 bold: false,
                                 italic: false
                             }
-                        }
+                        },
                     ]
                 }
             ],
@@ -147,7 +153,7 @@ export const Blocks = [
         },
         items: [
             {
-                title: "Religious Burials - 100,000 Years Old",
+                title: "Religious Burials",
                 blocks: [
                     {
                         id: 11,
@@ -193,7 +199,7 @@ export const Blocks = [
                 ]
             },
             {
-                title: "Göbekli Tepe - 10,000 Years Old",
+                title: "Göbekli Tepe",
                 blocks: [
                     {
                         id: 12,
@@ -240,7 +246,7 @@ export const Blocks = [
         id: 6,
         type: "paragraph",
         footnote: {
-            enabled: true
+            enabled: false
         },
         social: {
             enabled: true,
@@ -376,7 +382,7 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "After the enlightenment, the West supplanted God with science and philosophy with the realization that “large and consistent moral theories could exist without reference to God",
+                text: `After the enlightenment, the West supplanted God with science and philosophy with the realization that “large and consistent moral theories could exist without reference to God"`,
                 annotations: {
                     italic: false,
                 }
@@ -561,7 +567,7 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "Self help on the internet instead focuses on behaviour management. This treats the symptoms of our problems, not their root causes. This comes from a good place however; most of our problems are a result of our behaviours. If I’m up until 2AM at night consistently, and wake up with brain-fog every morning, I should go to bed earlier to solve the problem. Right?",
+                text: "Self help on the internet instead focuses on behaviour management.  This treats the symptoms of our problems, not their root causes. This comes from a good place however; most of our problems are a result of our behaviours. If I’m up until 2AM at night consistently, and wake up with brain-fog every morning, I should go to bed earlier to solve the problem. Right?",
                 annotations: {}
             }
         ]
@@ -571,7 +577,7 @@ export const Blocks = [
         type: "paragraph",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 4,
             comments: []
         },
         content: [
@@ -668,22 +674,8 @@ export const Blocks = [
             },
             {
                 type: "rich_text",
-                text: "Those who go down this rabbit hole may find themselves in a worse place than where they left off."
+                text: "Those who go down this rabbit hole may find themselves in a worse place than where they left off. This is the paradox of self-help:"
             },
-        ]
-    },
-    {
-        type: "paragraph",
-        social: {
-            enabled: true,
-            numComments: 0,
-            comments: []
-        },
-        content: [
-            {
-                type: "rich_text",
-                text: "This is the paradox of self-help:"
-            }
         ]
     },
     {
@@ -789,7 +781,7 @@ export const Blocks = [
         type: "block_quote",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 9,
             comments: []
         },
         source: "https://ellenlupton.com/Thinking-with-Type",
@@ -882,7 +874,15 @@ export const Blocks = [
                     content: [
                         {
                             type: "rich_text",
-                            text: "This is not to say that all online self-help modalities are useless. There is amazing tooling that can help you stay on track, accomplish your goals, and keep your headspace organized (I love Notion). Informative YouTubers such as Andrew Huberman and others explain the science of self improvement. There is hype around cold therapy, exercising is cool, and smoking isn’t. Personally, I have digital tooling that saves me over 40 workdays a year (1). The plethora of tools, knowledge, and advice available on the world wide web is astonishing;  please pick your poison carefully."
+                            text: "This is not to say that all online self-help modalities are useless. There is amazing tooling that can help you stay on track, accomplish your goals, and keep your headspace organized (I love Notion). Informative YouTubers such as Andrew Huberman and others explain the science of self improvement. There is hype around cold therapy, exercising is cool, and smoking isn’t. Personally, I have digital tooling that saves me over 40 workdays a year",
+                        },
+                        {
+                            type: "footnote",
+                            reference_id: "40-workdays"
+                        },
+                        {
+                            type: "rich_text",
+                            text: ". The plethora of tools, knowledge, and advice available on the world wide web is astonishing;  please pick your poison carefully."
                         }
                     ]
                 }
@@ -948,7 +948,7 @@ export const Blocks = [
         type: "paragraph",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 2,
             comments: []
         },
         content: [
@@ -1070,7 +1070,7 @@ export const Blocks = [
         type: "image",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 19,
             comments: []
         },
         src: "./article/career-anxiety.jpeg",
@@ -1227,7 +1227,13 @@ export const Blocks = [
     },
     {
         type: "image",
-        src: "./article/anxiety-no-source.jpeg"
+        src: "./article/anxiety-no-source.jpeg",
+        content: [
+            {
+                type: "rich_text",
+                text: "Jake's anxiety represented as coming from many different sources."
+            }
+        ]
     },
     {
         type: "paragraph",
@@ -1249,6 +1255,11 @@ export const Blocks = [
     },
     {
         type: "center_quote",
+        social: {
+            enabled: true,
+            numComments: 4,
+            comments: []
+        },
         content: [
             {
                 type: "rich_text",
@@ -1264,7 +1275,7 @@ export const Blocks = [
         type: "paragraph",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 2,
             comments: []
         },
         content: [
@@ -1508,13 +1519,13 @@ export const Blocks = [
         type: "paragraph",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 24,
             comments: []
         },
         content: [
             {
                 type: "rich_text",
-                text: "My issues started in Germany, when I woke up one day with tremors, blurry vision, and brain fog. I remember this clearly, because I checked myself in to the hospital on the day of my 19th birthday. After visits with many different doctors, they concluded that I most likely had multiple sclerosis. Without tests however, they wouldn’t be able to confirm. For the first time in my life, everything came crashing down.",
+                text: "My issues started in Germany, when I woke up one day with tremors, blurry vision, and brain fog. I remember this clearly, because I checked myself in to the hospital on the day of my 19th birthday. After visits with many different doctors, they concluded that I most likely had multiple sclerosis. Without tests however, they wouldn’t be able to confirm. For the first time in my life, everything came crashing down on me.",
                 annotations: {
                     italic: false,
                     bold: false
@@ -1566,7 +1577,7 @@ export const Blocks = [
         type: "paragraph",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 6,
             comments: []
         },
         content: [
@@ -1653,13 +1664,13 @@ export const Blocks = [
         type: "paragraph",
         social: {
             enabled: true,
-            numComments: 0,
+            numComments: 13,
             comments: []
         },
         content: [
             {
                 type: "rich_text",
-                text: "I began observing my reactions. I noticed thought patterns. I noticed limiting beliefs. For the first time, I started paying attention to what was happening inside. The more and more I did this (over many months and years), I began to get lighter. The progress was slow at first, but after a long time I noticed a dramatic shift. I was alert. I was more energetic. I could tell if someone had low energy, or high energy. As my attention drifted inwards, it began to radiate outwards into other areas in my life. Little by little, I was beginning to see…",
+                text: "I began observing reactions. I noticed thought patterns. I noticed limiting beliefs. For the first time, I started paying attention to what was happening inside. The more and more I did this (over many months and years), I began to get lighter. The progress was slow at first, but after a long time I noticed a dramatic shift. I was alert. I was more energetic. I could tell if someone had low energy, or high energy. As my attention drifted inwards, it began to radiate outwards into other areas in my life. Little by little, I was beginning to see…",
                 annotations: {
                     italic: false,
                     bold: false
@@ -1722,6 +1733,15 @@ export const Blocks = [
         ]
     },
     {
+        type: "h1",
+        content: [
+            {
+                type: "rich_text",
+                text: "End."
+            }
+        ]
+    },
+    {
         type: "paragraph",
         social: {
             enabled: true,
@@ -1731,7 +1751,7 @@ export const Blocks = [
         content: [
             {
                 type: "rich_text",
-                text: "I hope you had as much fun reading this as I did creating it. This interface is an MVP reading application for @buildspace.so. If you’d like to get updates on the application so you can write your own, drop your email below :)",
+                text: "I hope you had as much fun reading this as I did creating it. This interface is an MVP reading application for @buildspace.so. If you’d like to get updates on the application, or you would eventually like to write your own, drop your email below :)",
                 annotations: {
                     italic: false,
                     bold: false

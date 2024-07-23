@@ -11,6 +11,7 @@ import { globalFootnotes } from "@/api/globalFootnotes.js";
 import RewriteSheet from "@/Components/Complex/RewriteSheet.jsx";
 import { selectedBlockAtom } from "@/atoms/selectedBlockAtom.js";
 import { articleAtom } from "@/atoms/articleAtom.js";
+import Footer from "@/Components/Core/Footer.jsx";
 
 const Article = () => {
     const [blocks, setBlocks] = useState([]);
@@ -29,8 +30,8 @@ const Article = () => {
 
     return (
         <>
-            <div className="mt-12 w-full flex justify-center content-center">
-                <div className="article-root my-12 ">
+            <div className="w-full flex justify-center content-center">
+                <div className="article-root my-12 mb-24">
                     <RewriteSheet blockData={selectedBlock} open={dialogOpen} onOpenChange={setDialogOpen}/>
                     <div className={"mx-14"}>
                         <ArticleHeader className="text-black">
@@ -45,6 +46,7 @@ const Article = () => {
                     ))}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };
