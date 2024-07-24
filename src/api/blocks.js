@@ -27,7 +27,7 @@ export const Blocks = [
                     content: [
                         {
                             type: "rich_text",
-                            text: "Perhaps our fascination with fireworks has something to do with an appeal to the divine. Since many of us have never seen northern lights, or a clear night sky, perhaps fireworks serve to fulfill our intrinsic desire for God. Why else would they have been invented?",
+                            text: "Perhaps fireworks serve as the Northern Lights of the modern world. Our desire for the divine is etched into every aspect of society – we must only learn to look.",
                             annotations: {
                                 bold: false,
                                 italic: false,
