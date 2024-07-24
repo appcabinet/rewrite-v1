@@ -2,7 +2,7 @@ import TextContent from "@/Components/Text/TextContent.jsx";
 
 const ArticleHeader = ({ children }) => {
     return (
-        <h1 className={"text-5xl mb-2 mt-12 text-left"}>
+        <h1 className={"text-5xl mb-0 mt-12 text-left"} style={{ lineHeight: "55px" }}>
             {children}
         </h1>
     );

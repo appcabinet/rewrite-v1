@@ -38,7 +38,7 @@ const Article = () => {
                             {articleData?.title}
                         </ArticleHeader>
                         <Attribution>
-                            by: {articleData?.author?.name}
+                            {articleData?.author?.name} - {articleData?.created_at}
                         </Attribution>
                     </div>
                     {blocks.map(blockData => (
