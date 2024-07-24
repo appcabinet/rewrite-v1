@@ -34,9 +34,7 @@ const RewriteSheet = ({ blockData, ...props }) => {
         if (!blockData) return null;
 
         return (
-            <Component key={blockData.id + '-component'}
-                       blockData={blockData}
-            />
+            <Component key={blockData.id + '-component'} blockData={blockData}/>
         );
     };
 

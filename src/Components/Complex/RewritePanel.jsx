@@ -48,7 +48,7 @@ const RewritePanel = ({ blockData }) => {
     if (!blockData) return null;
 
     return (
-        <div className="w-full my-5">
+        <div className="my-5">
             <Tabs className="w-full" defaultValue={valuegen(items[0]?.title)}>
                 <TabsList className={'flex flex-row justify-start'}>
                     {renderTabTriggers()}
