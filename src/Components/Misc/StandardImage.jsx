@@ -5,8 +5,8 @@ const StandardImage = ({ blockData }) => {
         <div className={'w-full h-full flex flex-col content-center my-2'}>
             <img
                 src={blockData.src}
-                width={1200}
-                height={1200}
+                // width={1200}
+                // height={1200}
                 className={'border rounded-sm shadow'}
                 alt={''}
             />
